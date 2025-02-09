@@ -1,10 +1,20 @@
-user_prompt = "Enter a TODO:"
-
 todos = []
 
-# While loop
 while True:
-    todo = input(user_prompt)
-    todo.capitalize() # Capitalize first letter
-    todos.append(todo)
-    print(todos)
+    user_action = input("Type add, show or exit: ")
+    user_action = user_action.strip().lower()
+
+    match user_action:
+        case "add":
+            todo = input("Enter a todo: ")
+            todos.append(todo.capitalize())
+        case "show" | "display":
+            for item in todos:
+                item = item.title()
+                print(item)
+        case "exit":
+            break
+        case _:
+            print("Hey!, you entered an unknown command")
+
+print("Bye bye!")
