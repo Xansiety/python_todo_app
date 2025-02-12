@@ -1,4 +1,3 @@
-todos = []
 
 while True:
     user_action = input("Type add, show, edit, complete or exit: ")
@@ -6,8 +5,18 @@ while True:
 
     match user_action:
         case "add":
-            todo = input("Enter a todo: ")
-            todos.append(todo.capitalize())
+            todo = input("Enter a todo: ") + "\n"
+            file = open('todos.txt', 'r')
+            todos = file.readlines()
+            file.close() # close memory reader
+
+            todos.append(todo)
+
+            # store data into text file
+            file_writer = open('todos.txt', 'w')
+            file_writer.writelines(todos)
+            file_writer.close()
+
         case "edit":
             number = int(input("Enter a number of the TODO to edit: ")) # all inputs are string, needs be parsed with int
             number = number - 1
@@ -22,6 +31,7 @@ while True:
             for index, item in enumerate(todos):
                 row = f"{index + 1}. {item}" # interpolation data
                 print(row)
+        # print("hello", index, item) if its out, print the last item
         case "exit":
             break
         case _:
