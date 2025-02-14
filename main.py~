@@ -3,7 +3,7 @@ while True:
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip().lower()
 
-    match user_action:
+    match user_action: 
         case "add":
             todo = input("Enter a todo: ") + "\n"
             file = open('files/todos/todos.txt', 'r')
