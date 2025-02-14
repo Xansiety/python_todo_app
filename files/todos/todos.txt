@@ -1,5 +1,2 @@
 clean
-dish
 Go to gym!
-Ask!
-Complete a SGMM
