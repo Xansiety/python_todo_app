@@ -9,3 +9,13 @@ def get_average():
 
 average = get_average()
 print(average)
+
+
+def get_average():
+    print("Hi")
+    x = "hello"
+    return x.capitalize()
+
+
+get_average()
+
