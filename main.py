@@ -1,6 +1,13 @@
+# Standard Library
+import time
+
+# Custom module import
 # from functions import get_todos, write_todos # Import functions in the same level main.py
 # import functions -> to call functions.get_todos() -> Import MODULE
 from modules import functions as m
+
+now = time.strftime("%b %d, %Y, %H:%M:%S")
+print("It is", now)
 
 while True:
     user_action = input("Type add, show, edit, complete or exit: ")

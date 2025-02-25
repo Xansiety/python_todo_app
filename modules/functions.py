@@ -1,5 +1,8 @@
 # Custom Function
-def get_todos(filepath="files/todos/todos.txt"):
+FILEPATH = "files/todos/todos.txt"
+
+
+def get_todos(filepath=FILEPATH):
     """ Read a text file and return the list of to-do items
      Args:
          filepath: str. The path to the file to read
@@ -12,7 +15,7 @@ def get_todos(filepath="files/todos/todos.txt"):
 
 
 # Can't put an optional argument after the default arg
-def write_todos(todos_arg: list[str], filepath="files/todos/todos.txt"):
+def write_todos(todos_arg: list[str], filepath=FILEPATH):
     """ Write the to-do items list in the text file
      Args:
          todos_arg: list. The list of to-do items
